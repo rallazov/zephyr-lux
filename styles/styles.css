@@ -19,6 +19,53 @@ body {
     padding: 1rem 2rem;
     background-color: #000;
 }
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000; /* Default background color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar Hover Effect */
+.navbar:hover {
+    background-color: #333; /* Change to a lighter shade when hovered */
+}
+
+/* Links inside the Navbar */
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #ff0000; /* Change text color to red when hovered */
+}
+
+/* Navbar Icons Hover Effect */
+.nav-icons a {
+    color: #fff;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-icons a:hover {
+    color: #ff0000; /* Change icon color to red when hovered */
+}
+.hero {
+    background: url('../images/hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
 
 .logo img {
     height: 50px;
