@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+/* Header Styling */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 0; /* Adjust padding */
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    text-align: center; /* Center all text and content */
+    padding-bottom: 2rem; /* Add padding to accommodate the CTA buttons */
+}
+
 /* General Body Styling */
 body {
     font-family: 'Lato', sans-serif;
@@ -14,21 +26,19 @@ body {
     padding: 0;
 }
 
-/* Navigation Bar */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #ffffff; /* White background for the header */
-    z-index: 1000; /* Ensure the navbar is on top */
-    position: relative; /* Required for z-index to work */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin: 0 auto;
+    padding: 0 2rem; /* Adjust padding as needed */
 }
 
 /* Navbar Links */
 .nav-links {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
+    gap: 1.5rem;
     display: flex;
 }
 
@@ -38,7 +48,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000; /* Black text for the links */
+    color: #ffffff; /* White text by default */
     font-size: 1rem;
     transition: color 0.3s ease; /* Smooth color transition */
 }
@@ -49,7 +59,7 @@ body {
 
 /* Navbar Icons */
 .nav-icons a {
-    color: #000000; /* Black color for icons */
+    color: #ffffff; /* White icons by default */
     margin-left: 1.5rem;
     font-size: 1.2rem;
     transition: color 0.3s ease; /* Smooth color transition */
@@ -58,8 +68,14 @@ body {
 .nav-icons a:hover {
     color: #ff0000; /* Red color on hover */
 }
+/* Hover Effects */
 .navbar:hover {
-    background-color: #f0f0f0; /* Light grey on hover */
+    background-color: #ffffff; /* White background on hover */
+}
+
+.nav-links a:hover, 
+.nav-icons a:hover {
+    color: #000000; /* Black text and icons on hover */
 }
 
 /* Logo */
@@ -79,20 +95,40 @@ body {
     color: #ffffff; /* White text */
     padding: 2rem 1rem; /* Add some padding */
     background-color: #000000; /* Background color if image doesn't fill */
+    height: 80vh;
 }
 
 .hero-img {
     max-width: 100%;
     height: auto;
-    max-height: 60vh; /* Limits image height to 60% of viewport height */
+    max-height: 80vh; /* Limits image height to 60% of viewport height */
     width: auto;
+    object-fit: cover;
+    display: block; 
 }
 
-/* Positioning text on top of the image */
+/* Content overlay in the hero section */
 .hero-content {
     position: absolute;
     z-index: 10;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 2rem;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* CTA Buttons Styling */
+.discount-message .cta-buttons {
+    margin-top: 1rem; /* Add spacing above buttons */
+}
+
+.discount-message .cta-buttons .btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #ff0000;
     color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 0 0.5rem;
 }
 
 /* CTA Buttons */
@@ -105,26 +141,161 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-/* Footer (If applicable) */
-footer {
-    padding: 1rem;
-    background-color: #333333;
-    color: #ffffff;
+.cta-buttons .btn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Image Section Styling */
+.image-section {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-}
-
-/* Other sections */
-.section {
-    padding: 2rem;
     color: #ffffff;
 }
 
-/* Additional styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.image-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
+
+.image-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.image-content .btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.image-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.image-grid img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    padding-top: 2rem;
+}
+
+/* ============================Footer Container ==================================*/
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center align */
+    padding: 2rem 1rem; /* Ensure some spacing */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column form {
+    margin-top: 1rem;
+}
+
+.footer-column input[type="email"] {
+    padding: 0.5rem;
+    width: calc(100% - 100px);
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-column button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-column .social-icons a {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.875rem;
+}
+
+/* Discount Message Styling */
+.discount-message {
+    text-align: center;
+    background-color: #000000; /* Match header background */
+    color: #ffffff;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Add spacing between CTA and other elements */
+}
+
+.discount-message span {
+    display: block;
+}
+
+
+
+
 
