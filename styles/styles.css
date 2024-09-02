@@ -5,10 +5,13 @@
     box-sizing: border-box;
 }
 
+/* General Body Styling */
 body {
     font-family: 'Lato', sans-serif;
-    color: #333;
-    background-color: #fff;
+    color: #ffffff; /* White text for the black background */
+    background-color: #000000; /* Black background for the body */
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation Bar */
@@ -17,114 +20,111 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #000;
+    background-color: #ffffff; /* White background for the header */
+    z-index: 1000; /* Ensure the navbar is on top */
+    position: relative; /* Required for z-index to work */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
-/* Navbar Styling */
-.navbar {
+
+/* Navbar Links */
+.nav-links {
+    list-style: none; /* Remove bullet points */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #000; /* Default background color */
-    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-/* Navbar Hover Effect */
-.navbar:hover {
-    background-color: #333; /* Change to a lighter shade when hovered */
+.nav-links li {
+    margin-right: 1.5rem; /* Space between links */
 }
 
-/* Links inside the Navbar */
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #000000; /* Black text for the links */
     font-size: 1rem;
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .nav-links a:hover {
-    color: #ff0000; /* Change text color to red when hovered */
+    color: #ff0000; /* Red color on hover */
 }
 
-/* Navbar Icons Hover Effect */
+/* Navbar Icons */
 .nav-icons a {
-    color: #fff;
+    color: #000000; /* Black color for icons */
     margin-left: 1.5rem;
     font-size: 1.2rem;
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .nav-icons a:hover {
-    color: #ff0000; /* Change icon color to red when hovered */
+    color: #ff0000; /* Red color on hover */
 }
-.hero {
-    background: url('../images/hero-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
+.navbar:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
 }
+
+/* Logo */
 
 .logo img {
-    height: 50px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-}
-
-.nav-icons a {
-    color: #fff;
-    margin-left: 1.5rem;
-    font-size: 1.2rem;
+    height: 120px; /* Increase the height to make the logo larger */
+    width: auto; /* Maintain aspect ratio */
 }
 
 /* Hero Section */
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #ffffff; /* White text */
+    padding: 2rem 1rem; /* Add some padding */
+    background-color: #000000; /* Background color if image doesn't fill */
 }
 
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh; /* Limits image height to 60% of viewport height */
+    width: auto;
+}
+
+/* Positioning text on top of the image */
 .hero-content {
-    max-width: 600px;
+    position: absolute;
+    z-index: 10;
+    color: #ffffff;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #fff;
-}
-
+/* CTA Buttons */
 .cta-buttons .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     margin: 0 0.5rem;
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #ff0000; /* Red background for buttons */
+    color: #ffffff; /* White text on buttons */
     text-decoration: none;
     font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Footer (If applicable) */
+footer {
+    padding: 1rem;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Other sections */
+.section {
+    padding: 2rem;
+    color: #ffffff;
+}
+
+/* Additional styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
