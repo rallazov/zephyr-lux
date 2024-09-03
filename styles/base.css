@@ -1,0 +1,27 @@
+/* base.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; /* White text for the black background */
+    background-color: #000000; /* Black background for the body */
+    margin: 0;
+    padding: 0;
+}
+
+/* Global link styling */
+a {
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #ff0000; /* Red color on hover */
+}

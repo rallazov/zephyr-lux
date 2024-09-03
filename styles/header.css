@@ -1,0 +1,62 @@
+/* header.css */
+
+/* Header Styling */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2rem 0; /* Adjust padding */
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    text-align: center; /* Center all text and content */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2rem; /* Adjust padding as needed */
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    gap: 1.5rem;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1.5rem; /* Space between links */
+}
+
+.nav-links a {
+    color: #ffffff; /* White text by default */
+    font-size: 1rem;
+}
+
+/* Navbar Icons */
+.nav-icons a {
+    color: #ffffff; /* White icons by default */
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Hover Effects */
+.navbar:hover {
+    background-color: #ffffff; /* White background on hover */
+}
+
+.navbar:hover .nav-links a,
+.navbar:hover .nav-icons a {
+    color: #000000; /* Black text and icons on hover */
+}
+
+/* Logo */
+.logo img {
+    height: 120px; /* Increase the height to make the logo larger */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto 0;
+}

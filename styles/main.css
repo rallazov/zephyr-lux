@@ -1,0 +1,141 @@
+/* main.css */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* White text */
+    padding: 2rem 1rem; /* Add some padding */
+    background-color: #000000; /* Background color if image doesn't fill */
+    height: 80vh;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh; /* Limits image height to 80% of viewport height */
+    width: auto;
+    object-fit: cover;
+    display: block; 
+}
+
+/* Content overlay in the hero section */
+.hero-content {
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 2rem;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 1rem;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    background-color: #ff0000; /* Initial color */
+    color: #ffffff; /* White text on buttons */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.cta-buttons .btn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.cta-buttons .btn:active {
+    background-color: #990000; /* Even darker red on click */
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Discount Container Styling */
+.discount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+/* Each Discount Item Styling */
+.discount-item {
+    font-family: 'Lucida Grande';
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.discount-amount {
+    font-family: 'Lucida Grande';
+    font-size: 2.5rem;
+    color: #ff0000;
+}
+
+/* Vertical Line Between Items */
+.vertical-line {
+    width: 1px;
+    height: 1.5rem;
+    background-color: #ffffff; /* White color for the line */
+}
+
+/* Image Section Styling */
+.image-section {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.image-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.image-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.image-content .btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.image-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.image-grid img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}

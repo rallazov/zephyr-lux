@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zephyr Lux</title>
-    <link rel="stylesheet" href="../styles/styles.css"> <!-- Your main stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome stylesheet -->
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/main.css"> 
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/media.css">
+
 </head>
 <body>
     <!-- Header with Logo and Navbar -->
@@ -14,6 +19,11 @@
             <div class="logo">
                 <img src="../assets/logos/transparent_logo.png" alt="Zephyr Lux Logo">
             </div>
+            <span class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
             <ul class="nav-links">
                 <li><a href="women.html">Women</a></li>
                 <li><a href="men.html">Men</a></li>
@@ -29,16 +39,26 @@
             </div>
         </nav>
         <!-- Discount Message Section -->
-    <div class="discount-message">
-        <span>30-70% OFF SITEWIDE | EXTRA 20% OFF YOUR ORDER</span>
-        <div class="cta-buttons">
-            <a href="women.html" class="btn">Shop Women</a>
-            <a href="men.html" class="btn">Shop Men</a>
+        <div class="discount-message">
+            <h2>LONG WEEKEND SALE</h2>
+            <div class="discount-container">
+                <div class="discount-item">
+                    <span id="discount-amount">30-70% OFF</span>SITEWIDE
+                </div>
+                <div class="vertical-line"></div>
+                <div class="discount-item">
+                    <span id="discount-amount">20% OFF</span>YOUR ORDER
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="women.html" class="btn">Shop Women</a>
+                <a href="men.html" class="btn">Shop Men</a>
+            </div>
         </div>
-    </div>
 
        
     </header>
+    <script src="../scripts/main.js"></script>
 
     <!-- Hero Section with Image -->
     <section class="hero">
@@ -60,8 +80,8 @@
         <!-- Second Additional Image Section -->
         <section class="image-section">
             <div class="image-grid">
-                <img src="../assets/images/section-image2.jpg" alt="Section Image 2">
-                <img src="../assets/images/section-image3.jpg" alt="Section Image 3">
+                <img src="../assets/images/others/2Infographic.jpeg" alt="Section Image 2">
+                <img src="../assets/images/others/6infographic.jpeg" alt="Section Image 3">
             </div>
         </section>
     
