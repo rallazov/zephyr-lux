@@ -11,20 +11,37 @@ header {
     text-align: center; /* Center all text and content */
 }
 
+
 /* Navbar */
 .navbar {
+    background-color: #000000; /* Default background color */
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding: 0 2rem; /* Adjust padding as needed */
+    position: fixed; /* Fixed positioning for scrolling */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease, background-color 0.3s ease; /* Smooth transition for top and background-color */
 }
+
+
 
 /* Navbar Links */
 .nav-links {
     list-style: none;
-    gap: 1.5rem;
     display: flex;
+    gap: 1.5rem;
+    margin-right: 210px;
+}
+
+/* Navbar Icons */
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
 }
 
 .nav-links li {
@@ -34,6 +51,12 @@ header {
 .nav-links a {
     color: #ffffff; /* White text by default */
     font-size: 1rem;
+    transition: color 0.3s ease; /* Ensure a smooth color transition */
+}
+
+/* Hover Effects */
+.nav-links a:hover {
+    color: #ff0000; /* Red color on hover */
 }
 
 /* Navbar Icons */
@@ -43,14 +66,25 @@ header {
     font-size: 1.2rem;
 }
 
-/* Hover Effects */
+/* Navbar Hover */
 .navbar:hover {
     background-color: #ffffff; /* White background on hover */
 }
 
+/* Hidden class to move the navbar out of view */
+.navbar.hidden {
+    top: -100px; /* Move navbar off the top of the viewport */
+}
+
+/* Change colors of links and icons when navbar is hovered */
 .navbar:hover .nav-links a,
 .navbar:hover .nav-icons a {
     color: #000000; /* Black text and icons on hover */
+}
+
+/* Maintain individual link hover color even when navbar is hovered */
+.navbar:hover .nav-links a:hover {
+    color: #ff0000 !important; /* Red color on individual link hover, overriding navbar hover */
 }
 
 /* Logo */
